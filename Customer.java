@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
-    <artifactId>Main</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>25</maven.compiler.release>
-        <exec.mainClass>com.mycompany.main.Main</exec.mainClass>
-    </properties>
-</project>
+
+package com.mycompany.main;
+
+public class Customer {
+    private int customerID;
+    private String name;
+    private String email;
+
+    public Customer(int customerID, String name, String email) {
+        this.customerID = customerID;
+        this.name = name;
+        this.email = email;
+    }
+
+    public void placeOrder(Order order) {
+        System.out.println("Order " + order.getOrderID() + " placed by " + name);
+    }
+}
